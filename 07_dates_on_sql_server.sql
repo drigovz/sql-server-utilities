@@ -59,3 +59,19 @@ SELECT DATEADD(YEAR, 1, @currentDate) AS NewDate;
 
 -- remove days to date 
 SELECT DATEADD(DAY, -1, @currentDate) AS NewDate;
+
+-- diference between 2 dates 
+DECLARE @currentDateTime DATETIME
+SET @currentDateTime=GETDATE()
+
+DECLARE @futureDate DATETIME
+SET @futureDate=DATEADD(YEAR, 5, @currentDateTime)
+
+-- diff in days 
+SELECT DATEDIFF(DAY, @currentDateTime, @futureDate) AS DifferenceDate
+
+-- years
+SELECT DATEDIFF(YEAR, @currentDateTime, @futureDate) AS DifferenceDate
+
+-- months
+SELECT DATEDIFF(MONTH, @currentDateTime, @futureDate) AS DifferenceDate

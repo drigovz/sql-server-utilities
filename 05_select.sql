@@ -19,7 +19,10 @@ SELECT CONCAT(FirstName, ' ', LastName) AS Name
 FROM Person.Person
 GO
 
-
+-- select only unique values, without duplications 
+SELECT DISTINCT FirstName 
+FROM Person.Person
+GO
 
 
 
