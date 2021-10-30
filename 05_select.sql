@@ -24,7 +24,9 @@ SELECT DISTINCT FirstName
 FROM Person.Person
 GO
 
-
+-- select the 20 first registers
+SELECT TOP 20 * FROM Person.Person
+GO
 
 
 
