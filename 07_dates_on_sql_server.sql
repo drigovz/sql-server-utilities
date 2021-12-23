@@ -75,3 +75,10 @@ SELECT DATEDIFF(YEAR, @currentDateTime, @futureDate) AS DifferenceDate
 
 -- months
 SELECT DATEDIFF(MONTH, @currentDateTime, @futureDate) AS DifferenceDate
+
+-- filter fo date  
+SELECT * FROM Customers
+WHERE CAST(CreatedAt as date) BETWEEN CAST('2021-12-23' as date) AND CAST('2021-12-23' as date)
+ORDER BY Id ASC
+
+
